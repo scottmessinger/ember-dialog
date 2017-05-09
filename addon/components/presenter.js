@@ -68,7 +68,7 @@ export default Ember.Component.extend({
    * @method
    * @fires module:ember-dialog/components/presenter~accepted
    */
-  accept() { this._accept(); },
+  accept() { this._accept(...arguments); },
 
   /**
    * @method
@@ -76,7 +76,7 @@ export default Ember.Component.extend({
    */
   _accept() {
 
-    this.resolve();
+    this.resolve(...arguments);
 
     /**
      * @event module:ember-dialog/components/presenter~accepted
@@ -90,7 +90,7 @@ export default Ember.Component.extend({
    * @method
    * @fires module:ember-dialog/components/presenter~declined
    */
-  decline() { this._decline(); },
+  decline() { this._decline(...arguments); },
 
   /**
    * @method
@@ -98,7 +98,7 @@ export default Ember.Component.extend({
    */
   _decline() {
 
-    this.reject();
+    this.reject(...arguments);
 
     /**
      * @event module:ember-dialog/components/presenter~declined
