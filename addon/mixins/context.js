@@ -24,7 +24,7 @@ export function execAction(actionName, args) {
       context.actions[actionName].apply(context, args);
     }
   } else {
-    this[actionName].apply(this);
+    this[actionName].apply(this, args);
   }
 }
 
